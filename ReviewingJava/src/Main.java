@@ -1,7 +1,9 @@
 //For java install, begin with installing JDK, then Java and Extension Pack for Java extensions in vscode.
 import java.awt.Point;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -108,6 +110,133 @@ public class Main {
         final float PI = 3.14F; //with final, we cannot change this value later on
 
         //Arithmetic expressions:
+       
+        //Add
+        int result = 10 + 3; //-, /, *
+        System.out.println(result);
+
+        //For division, need to cast:
+        double result_new = (double)10 / (double)3;
+        System.out.println(result_new);
+
+        //Can increment and decrement with result++ or result-- or result = result + # and so on or x+=#
+        //result++ vs ++result:
+        //first one increments first, then returns new value
+        //second one returns old value first, then increments
+
+
+        //Casting:
+
+        //Implicit casting:
+        //byte > short > int > long > float > double, meaning byte can be converted to short, etc
+        double s = 1.1;
+        double p = s + 2; //an integer is less precise than a double, so automatic casts happen; implicit casting happens when no data is lost in transfer
+        System.out.println(p);
+
+        //Explicit casting:
+        double m = 1.1;
+        int j = (int)m + 2;
+        System.out.println(j);
+
+        //Want to cast return type before returning; only works for compatible types: for example, string cannot be converted to number
+        //However, we can use built in wrapper classes to help with this difference in types
+        String x_ = "1";
+        int y_ = Integer.parseInt(x_) + 2;
+        System.out.println(y_);
+
+
+        //Math class:
+        //Not all of them!
+        int result_ = Math.round(1.1F);
+        //int result_ = (int)Math.ceil(1.1F); -->2
+        //int result_ = (int)Math.floor(1.1F); -->1
+        //int result_ =  Math.max(1, 2);
+        //int result_ =  Math.min(1, 2);
+        //double result_ =  Math.random(); --> returns a floating point number between 0.0 and 1.0 (inclusive, exclusive)
+        //Want a number from 0 to 100: //int result_ =  Math.random() * 100;
+        //int result_ =  (int)Math.round(Math.random() * 100);
+        System.out.println(result_);
+
+
+        //Formatting Numbers:
+        //NumberFormat currency = NumberFormat.getCurrencyInstance(); //factory method, each NumberFormat call returns a NumberFormat object
+        //String money_result = currency.format(1234567.891);
+        //System.out.println(money_result);
+
+        //NumberFormat percent = NumberFormat.getPercentInstance(); //factory method
+        //String money_result = percent.format(0.1);
+        //System.out.println(money_result);
+
+        //This is the same as the last one, except we can modify the first line unless we have many, especially different, calls to it
+        String money_result = NumberFormat.getPercentInstance().format(0.1); //method chaining
+        System.out.println(money_result);
         
+
+        //Reading Input:
+        //Scanner class helps with reading inputs
+        Scanner scanner = new Scanner(System.in); //inside parantheses is where we work with scanner
+        System.out.print("Name: "); //print avoids new line issue
+        String name_scan = scanner.nextLine().trim(); //depending on type, may need diff next### call; nextLine allows for reading as many spaced out words before pressing enter
+        System.out.println("You are " + name_scan); //this is a case of implicit casting, IDE converts byte to a string
+
+
+
+        //Types Summary:
+
+
+
+        //Comparison Operators:
+
+
+
+        //Logical Operators:
+
+
+
+        //If Statements:
+
+
+
+        //Simplifying If Statements:
+
+
+
+        //The Ternary Operator:
+
+
+
+        //Switch Statements:
+
+
+
+        //For loops:
+
+
+
+        //While loops:
+
+
+        //Do..While Loops:
+
+
+        //Break and Continue:
+
+
+        //For-Each Loop:
+
+
+        //Control Flow Summary:
+
+
+        //Clean Coding:
+
+
+
+
+
+
+
+
+
     }
 }
