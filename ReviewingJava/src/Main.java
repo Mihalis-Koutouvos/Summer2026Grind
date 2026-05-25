@@ -284,7 +284,7 @@ public class Main {
             System.out.println(fruits[i]);
         }
 
-        //For-each loop
+        //For-each loop; downside: it is forward only, so we cannot iterate backwards
         for (String fruit : fruits) {
             System.out.println(fruit);
         }
