@@ -180,55 +180,124 @@ public class Main {
         System.out.println("You are " + name_scan); //this is a case of implicit casting, IDE converts byte to a string
 
 
+        //Comparison Operators and Logical Operators:
+        //Options: ==, !=, <, >, <=, >=, &&, ||, !name (reversing bool)
+        //Possible booleans: true, false
 
-        //Types Summary:
+        int temp = 22;
+        boolean isWarm = temp > 20 && temp < 30;
+        System.out.println(isWarm);
 
-
-
-        //Comparison Operators:
-
-
-
-        //Logical Operators:
+        boolean hasHighIncome = true;
+        boolean hasGoodCredit = false;
 
 
 
         //If Statements:
-
-
+        int new_temp = 32;
+        if (temp > 30) {
+            System.out.println("It is a hot day.");
+            System.out.println("Drink water.");
+        } else if (new_temp > 20 && temp <= 30) {
+            System.out.println("It is a beautiful day.");
+        } else {
+            System.out.println("It is a cold day.");
+        }
+            
 
         //Simplifying If Statements:
-
+        int income = 120_000;
+        boolean hasHighIncomeNew = (income > 100_000); //dont have to wrap in parentheses
 
 
         //The Ternary Operator:
-
+        String className = income > 100_000 ? "First" : "Economy";
 
 
         //Switch Statements:
+        String role = "admin";
+
+        switch (role) {
+            case "admin":
+                System.out.println("You are an admin.");
+                break;
+
+            case "user":
+                System.out.println("You are a user.");
+                break;
+
+            default:
+                System.out.println("You are a guest."); //once we get here, we automatically break
+        }
 
 
 
         //For loops:
-
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Hello World");
+        }
 
 
         //While loops:
+        int je = 0;
 
+        while (je > 0) {
+            System.out.println("Hello World " + je);
+            je--;
+        }
 
         //Do..While Loops:
+        //Similar to while loop, but it gets executed at least once; rarely used
+        String input_new = "";
+
+        do { 
+            System.out.println("Input: ");
+            input_new = scanner.next().toLowerCase();
+            System.out.println(input_new);
+            
+        } while (!input_new.equals("quit"));
 
 
         //Break and Continue:
+        Scanner scanner_2 = new Scanner(System.in);
+        String input_2 = "";
+
+        while (true) { 
+            System.out.println("Input: ");
+            input_2 = scanner_2.next().toLowerCase();
+
+            if (input_2.equals("pass")) {
+                continue; //java keeps going
+            }
+            if (input_2.equals("quit")) {
+                break; //java ignores everything else after
+            }
+            System.out.println(input_2);
+        }
 
 
         //For-Each Loop:
+        String[] fruits = {"Apple", "Banana", "Orange"};
+
+        //For loop
+        for (int i = 0; i < fruits.length; i++) {
+            System.out.println(fruits[i]);
+        }
+
+        //For-each loop
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
 
 
         //Control Flow Summary:
 
 
+
+
         //Clean Coding:
+
+
 
 
 
